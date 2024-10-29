@@ -1,8 +1,8 @@
 {
-  "name": "nestjs-app",
+  "name": "<%= projectName %>",
   "version": "0.0.1",
   "description": "",
-  "author": "",
+  "author": "<%= params.author %>",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {

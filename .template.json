@@ -1,0 +1,35 @@
+{
+  "name": "typescript-blank",
+  "description": "Create a blank project with TypeScript",
+  "initParams": [
+    {
+      "name": "author",
+      "message": "What is your name?",
+      "type": "input",
+      "default": ""
+    },
+    {
+      "name": "packageManager",
+      "message": "Choose a package manager",
+      "type": "select",
+      "choices": [
+        {
+          "name": "npm",
+          "value": "npm",
+          "description": "NPM Package Manager"
+        },
+        {
+          "name": "yarn",
+          "value": "yarn",
+          "description": "Yarn Package Manager"
+        },
+        {
+          "name": "pnpm",
+          "value": "pnpm",
+          "description": "PNPM Package Manager"
+        }
+      ],
+      "default": "npm"
+    }
+  ]
+}

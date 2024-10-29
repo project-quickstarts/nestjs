@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post, Res } from '@nestjs/common';
+import { BadRequestException, Body, Controller, Get, Post, Res } from '@nestjs/common';
 import { ApiBody, ApiTags, getSchemaPath } from '@nestjs/swagger';
 import { ExampleService } from './example.service';
 import {
@@ -57,5 +57,15 @@ export class ExampleController {
   addExchange(@Res() res: Response) {
     this.exampleService.addExchange();
     res.sendStatus(200);
+  }
+
+  @Get('http-error')
+  httpError() {
+    throw new BadRequestException('bad request');
+  }
+
+  @Get('error')
+  error() {
+    throw new Error('error');
   }
 }
